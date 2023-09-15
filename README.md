@@ -1,4 +1,5 @@
 # picsumpphotos
 
-<img src = "https://github.com/AbdurazzoqAbdugafforov/picsumphotos/assets/134942447/81f3170a-9585-494c-a4ed-aff00c9899fd" width = "250" height = "600">
-<img src = "https://github.com/AbdurazzoqAbdugafforov/picsumphotos/assets/134942447/959dd062-4bd4-44e9-ad6b-a072f55a752f" width = "250" height = "600">
+
+<img src = "https://github.com/AbdurazzoqAbdugafforov/picsumphotos/assets/134942447/9d5e6bfd-7347-48eb-8d3b-adf469e1e23f" width = "250" height = "600">
+<img src = "https://github.com/AbdurazzoqAbdugafforov/picsumphotos/assets/134942447/f1ac1713-a0e1-4e4d-91d9-93401423f93d" width = "250" height = "600">
