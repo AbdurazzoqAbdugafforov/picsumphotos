@@ -1,4 +1,4 @@
-# picsumpphotos
+# Picsum photos
 
 
 <img src = "https://github.com/AbdurazzoqAbdugafforov/picsumphotos/assets/134942447/9d5e6bfd-7347-48eb-8d3b-adf469e1e23f" width = "300" height = "600">
