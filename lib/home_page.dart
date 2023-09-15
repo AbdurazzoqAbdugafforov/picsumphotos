@@ -87,6 +87,7 @@ class _HomePageState extends State<HomePage> {
     _refreshController.refreshCompleted();
   }
 
+  @override
   void dispose() {
     super.dispose();
     _refreshController.dispose();
@@ -97,7 +98,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _isLoading
-          ? Center(child: const CircularProgressIndicator())
+          ? const Center(child: CircularProgressIndicator())
           : SmartRefresher(
               controller: _refreshController,
               enablePullUp: true,
@@ -115,16 +116,41 @@ class _HomePageState extends State<HomePage> {
                                 builder: (_) =>
                                     DetailsPage(photo: _photos[index])));
                       },
-                      child: Column(
-                        children: [
-                          CachedNetworkImage(
-                            imageUrl: '${_photos[index].downloadUrl}',
-                            width: double.infinity,
-                            height: 200,
-                            fit: BoxFit.cover,
-                          ),
-                          Text('${_photos[index].author}'),
-                        ],
+                      child: Container(
+                        margin: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 6),
+                        padding: const EdgeInsets.only(bottom: 10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.green,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ClipRRect(
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(10),
+                                topRight: Radius.circular(10),
+                              ),
+                              child: CachedNetworkImage(
+                                imageUrl: '${_photos[index].downloadUrl}',
+                                width: double.infinity,
+                                height: 200,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            const SizedBox(height: 20),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10.0),
+                              child: Text(
+                                '${_photos[index].author}',
+                                style: const TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     );
                   }),
@@ -138,7 +164,8 @@ class _HomePageState extends State<HomePage> {
                   curve: Curves.easeInOut,
                 );
               },
-              child: Icon(
+              backgroundColor: Colors.green,
+              child: const Icon(
                 Icons.keyboard_arrow_up,
                 size: 40,
               ),
